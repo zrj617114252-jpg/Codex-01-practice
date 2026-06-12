@@ -527,6 +527,12 @@
         background: rgba(255, 255, 255, 0.08);
         font: inherit;
         outline: none;
+        color-scheme: dark;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(255, 255, 255, 0.48);
       }
 
       input:focus,
@@ -867,12 +873,22 @@
               </select>
             </label>
             <label>
-              手机号码
-              <input type="tel" name="phone" placeholder="请输入联系方式" />
-            </label>
-            <label>
               预约日期
               <input type="date" name="date" />
+            </label>
+            <label>
+              期望到店时间
+              <input
+                type="time"
+                name="arrival-time"
+                min="10:00"
+                max="20:00"
+                step="1800"
+              />
+            </label>
+            <label class="full">
+              手机号码
+              <input type="tel" name="phone" placeholder="请输入联系方式" />
             </label>
             <label class="full">
               特别说明
